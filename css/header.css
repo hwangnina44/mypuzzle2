@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+/* header */
+header {
+    width: 100%;
+    height: 130px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+header .top {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header .top .logo {
+    height: 32px;
+    margin-bottom: 32px;
+}
+
+header .top .logo a.active {
+    color: #5B1A7C;
+}
+
+header .top .logo a img {
+    height: 100%;
+}
+
+header .top .gnb {}
+
+header .top .gnb ul {}
+
+header .top .gnb ul li {
+    float: none;
+    display: inline-block;
+    padding: 0 42px;
+}
+
+
+.gnb ul li a:hover {
+    color: #5B1A7C;
+}
+
+/* 스크립트 추가 */
+header.bar-active {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: 'S-Core Dream 5';
+    font-weight: 500;
+    font-size: 18px;
+}
+
+header.bar-active .top {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header.bar-active .top .logo {
+    height: 32px;
+    margin-bottom: 32px;
+   position: absolute;
+   left: 0;
+   top: -7px;
+}
+
+header.bar-active .top .logo a.active {
+    color: #5B1A7C;
+}
+
+header .top .logo a img {
+    height: 100%;
+}
+
+header.bar-active .top .gnb {
+    display: inline-block;
+}
+
+header.bar-active .top .gnb ul {}
+
+header.bar-active .top .gnb ul li {
+    float: none;
+    display: inline-block;
+    padding: 0 24px;
+}
+
+
+.gnb ul li a:hover {
+    color: #5B1A7C;
+}
+
+header.bar-active .top .login {
+    display: inline-block;
+}
+header.bar-active .top .login .icon-btn {
+    display: none;
+}
+/* 로그인 */
+
+header .top .login {
+    position: absolute;
+    right: 0;
+    top: -10px;
+}
+
+header .top .login .icon-btn {
+    display: inline-block;
+    padding: 0 8px;
+    height: 28px;
+    vertical-align: middle;
+}
+
+header .top .login .icon-btn img {
+    display: block;
+    height: 100%;
+}
+
+header .top .login .btn {
+    display: inline-block;
+    color: #fff;
+    background-image: linear-gradient(to bottom right, #9550b8,#782c9e,#5B1A7C);
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-family: 'S-Core Dream 4';
+    font-weight: 400;
+    font-size: 14px;
+}
+
+header .top .login .btn:hover {
+    color: #fff;
+    background-image: linear-gradient(to bottom right,#782c9e,#5B1A7C,#3C1152 );
+}
+
+.login .btn::after {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height:12px;
+    background: url(../img/icon/btn_more_W.png) no-repeat 4px 0 /8px;
+    
+}
