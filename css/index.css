@@ -30,35 +30,32 @@ article.slide {
 .banner .banner-box {
     float: left;
     width: 25%;
+    height: 850px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+
 }
-.banner .banner-box::after{
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.15);
-    position: absolute;
-    left: 0;
-    top:0;
-    z-index: 1;
+.banner .banner-box::after {
+ content: "";
+ display: block;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0, 0, 0, 0.5);
+}
+.banner .box1 {
+    background-image: url(../img/banner2-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.banner .banner-box img {
-    display: block;
-    width: 100%;
-    position: relative;
+.banner .banner-box .title {
+    width:1290px
 }
-article.slide .title {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 40%;
-    z-index: 2;
-    text-align: center;
-}
+
 
 .slide .title h2 {
-    font-size: 28px;
+    font-size: 40px;
     color: #fff;
     text-shadow: 0 0 2px #eee;
     margin-bottom: 16px;
