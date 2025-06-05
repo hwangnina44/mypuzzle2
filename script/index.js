@@ -1,13 +1,21 @@
 //index.js
 
 $(document).ready(function () {
+    if ($('header').has('.index')) {
+    $('.logo img').attr('src', 'img/Logo_w.png');
+    $('.login .icon-login img').attr('src', 'img/icon/icon_login_w.png');
+    $('.login .icon-cart img').attr('src', 'img/icon/icon_cart_w.png');
+}
 
     //상단바
     $(window).scroll(function () {
-        if ($(window).scrollTop() > 100) {
+        if ($(window).scrollTop() > 250) {
             $('header').addClass('bar-active');
+            $('.logo img').attr('src', 'img/Logo.png');
+
         } else {
             $('header').removeClass('bar-active');
+             $('.logo img').attr('src', 'img/Logo_w.png');
         }
     });
     //
