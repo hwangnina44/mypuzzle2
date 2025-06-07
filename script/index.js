@@ -1,37 +1,56 @@
 //index.js
 
-$(document).ready(function () {
-    if ($('header').has('.index')) {
+
+// 기본형 헤더로 바꾸는 함수
+function setTransparentGNB() {
+    $('header').addClass('transparent');
+    $('header').removeClass('bar-active');
     $('.logo img').attr('src', 'img/Logo_w.png');
     $('.login .icon-login img').attr('src', 'img/icon/icon_login_w.png');
     $('.login .icon-cart img').attr('src', 'img/icon/icon_cart_w.png');
+
 }
 
-    //상단바
+// 실행형 헤더로 바꾸는 함수
+function setDefaultGNB() {
+    $('header').addClass('bar-active');
+    $('header').removeClass('transparent');
+
+    $('.logo img').attr('src', 'img/Logo.png');
+    $('.login .icon-login img').attr('src', 'img/icon/icon_login.png');
+    $('.login .icon-cart img').attr('src', 'img/icon/icon_cart.png');
+}
+
+$(document).ready(function () {
+    setTransparentGNB();
     $(window).scroll(function () {
         if ($(window).scrollTop() > 250) {
-            $('header').addClass('bar-active');
-            $('.logo img').attr('src', 'img/Logo.png');
-
+            setDefaultGNB();
         } else {
-            $('header').removeClass('bar-active');
-             $('.logo img').attr('src', 'img/Logo_w.png');
+            setTransparentGNB();
         }
     });
-    //
 
 
-////////////////////////////슬라이드/////////////////////////////////////////
+
+    ////////////////////////////슬라이드/////////////////////////////////////////
 
     var slidW = $('.banner-box').width();
+    var stat = 0;
+    var num = $('.banner-box').index();
+    console.log(num);
 
     // 슬라이드 초기화: 마지막 슬라이드를 앞에 붙이고 margin-left 조정
-    $('.banner .banner-box:last').prependTo('.banner');
+   /*  $('.banner .banner-box:last').prependTo('.banner');
     $('.banner').css('margin-left', -slidW);
 
-    //var timer = setInterval(slideNext, 3000);
+
+    var timer = setInterval(slideNext, 3000);
+
+
 
     function slideNext() {
+
         $('.banner').animate({
             marginLeft: '-=' + slidW
         }, 800, function () {
@@ -49,20 +68,20 @@ $(document).ready(function () {
         });
     }
 
-    $('.btn-next a').click(function (e) {
-        e.preventDefault();
-        clearInterval(timer);
-        slideNext();
-        timer = setInterval(slideNext, 3000);
-    });
-
-    $('.btn-prev a').click(function (e) {
-        e.preventDefault();
-        clearInterval(timer);
-        slidePrev();
-        timer = setInterval(slideNext, 3000);
-    });
-
+      $('.btn-next a').click(function (e) {
+         e.preventDefault();
+         clearInterval(timer);
+         slideNext();
+         timer = setInterval(slideNext, 3000);
+     });
+ 
+     $('.btn-prev a').click(function (e) {
+         e.preventDefault();
+         clearInterval(timer);
+         slidePrev();
+         timer = setInterval(slideNext, 3000);
+     }); 
+ */
 });
 
 
