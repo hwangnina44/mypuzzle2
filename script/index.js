@@ -22,6 +22,7 @@ function setDefaultGNB() {
 }
 
 $(document).ready(function () {
+
     setTransparentGNB();
     $(window).scroll(function () {
         if ($(window).scrollTop() > 250) {
@@ -31,14 +32,22 @@ $(document).ready(function () {
         }
     });
 
-
-
-    ////////////////////////////슬라이드/////////////////////////////////////////
+    /////////////////////////////////////////////////슬라이드/////////////////////////////////////////
 
     var slidW = $('.banner-box').width();
     var stat = 0;
-    var num = $('.banner-box').index();
-    console.log(num);
+    var pageCount=0;
+    var totalPage= $('.banner-box').length;
+    console.log(totalPage);
+    auto();
+    //1.슬라이드 이동시키기
+
+    function auto(){
+
+        $('banner-box').animate({
+            marginLeft : -(slidw*pageCount)
+        });
+    }
 
     // 슬라이드 초기화: 마지막 슬라이드를 앞에 붙이고 margin-left 조정
    /*  $('.banner .banner-box:last').prependTo('.banner');
