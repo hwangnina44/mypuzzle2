@@ -35,62 +35,65 @@ $(document).ready(function () {
     /////////////////////////////////////////////////슬라이드/////////////////////////////////////////
 
     var slidW = $('.banner-box').width();
-    var stat = 0;
-    var pageCount=0;
-    var totalPage= $('.banner-box').length;
+    var pageCount = 0;
+    var totalPage = $('.banner-box').length;
     console.log(totalPage);
     auto();
     //1.슬라이드 이동시키기
 
-    function auto(){
+/*     function auto() {
+        if (pageCount < totalPage) {
+            pageCount++
+            $('.banner').animate({
+                marginLeft: '-=' + (pageCount * slidW)
+            }, 3000, function () {
 
-        $('banner-box').animate({
-            marginLeft : -(slidw*pageCount)
-        });
+            })
+        }
     }
-
-    // 슬라이드 초기화: 마지막 슬라이드를 앞에 붙이고 margin-left 조정
-   /*  $('.banner .banner-box:last').prependTo('.banner');
-    $('.banner').css('margin-left', -slidW);
-
-
-    var timer = setInterval(slideNext, 3000);
-
-
-
-    function slideNext() {
-
-        $('.banner').animate({
-            marginLeft: '-=' + slidW
-        }, 800, function () {
-            $('.banner-box:first').appendTo('.banner');
-            $('.banner').css('margin-left', -slidW);
-        });
-    }
-
-    function slidePrev() {
-        $('.banner').animate({
-            marginLeft: '+=' + slidW
-        }, 800, function () {
-            $('.banner-box:last').prependTo('.banner');
-            $('.banner').css('margin-left', -slidW);
-        });
-    }
-
-      $('.btn-next a').click(function (e) {
-         e.preventDefault();
-         clearInterval(timer);
-         slideNext();
-         timer = setInterval(slideNext, 3000);
-     });
- 
-     $('.btn-prev a').click(function (e) {
-         e.preventDefault();
-         clearInterval(timer);
-         slidePrev();
-         timer = setInterval(slideNext, 3000);
-     }); 
  */
+    // 슬라이드 초기화: 마지막 슬라이드를 앞에 붙이고 margin-left 조정
+    /*  $('.banner .banner-box:last').prependTo('.banner');
+     $('.banner').css('margin-left', -slidW);
+ 
+ 
+     var timer = setInterval(slideNext, 3000);
+ 
+ 
+ 
+     function slideNext() {
+ 
+         $('.banner').animate({
+             marginLeft: '-=' + slidW
+         }, 800, function () {
+             $('.banner-box:first').appendTo('.banner');
+             $('.banner').css('margin-left', -slidW);
+         });
+     }
+ 
+     function slidePrev() {
+         $('.banner').animate({
+             marginLeft: '+=' + slidW
+         }, 800, function () {
+             $('.banner-box:last').prependTo('.banner');
+             $('.banner').css('margin-left', -slidW);
+         });
+     }
+ 
+       $('.btn-next a').click(function (e) {
+          e.preventDefault();
+          clearInterval(timer);
+          slideNext();
+          timer = setInterval(slideNext, 3000);
+      });
+  
+      $('.btn-prev a').click(function (e) {
+          e.preventDefault();
+          clearInterval(timer);
+          slidePrev();
+          timer = setInterval(slideNext, 3000);
+      }); 
+  */
 });
 
 
